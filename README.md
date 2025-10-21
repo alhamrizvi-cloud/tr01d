@@ -1,5 +1,5 @@
 # Tr10d: Sensitive Data Hunting Tool
-
+-Alhan Rizvi
 ## Overview
 
 **Tr10d** is a command-line tool designed for security researchers, penetration testers, and bug bounty hunters. Its primary purpose is to identify and extract sensitive information such as API keys, tokens, and other credentials from web pages. By automating the search for common patterns of sensitive data exposure, Tr10d helps users assess the security posture of web applications and identify potential vulnerabilities.
