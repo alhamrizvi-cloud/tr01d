@@ -24,3 +24,4 @@ Follow these steps to install and set up Tr01d:
 2. **Install Required Dependencies**: Open a terminal and run the following command to install the required Python packages:
    ```bash
    pip install pyfiglet requests
+   python3 tr10dbyalhamv1.py
