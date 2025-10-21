@@ -17,7 +17,10 @@
 
 ## Installation
 
-1. Ensure that Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
-2. Install the required dependencies using pip:
+Follow these steps to install and set up Tr01d:
+
+1. **Install Python**: Ensure that Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
+
+2. **Install Required Dependencies**: Open a terminal and run the following command to install the required Python packages:
    ```bash
    pip install pyfiglet requests
