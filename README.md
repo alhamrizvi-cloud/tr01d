@@ -1,27 +1,54 @@
-# Tr10d: Sensitive Data Hunting Tool
--Alham Rizvi
-## Overview
+# TR01D – JavaScript Secret Scanner
 
-**Tr10d** is a command-line tool designed for security researchers, penetration testers, and bug bounty hunters. Its primary purpose is to identify and extract sensitive information such as API keys, tokens, and other credentials from web pages. By automating the search for common patterns of sensitive data exposure, Tr10d helps users assess the security posture of web applications and identify potential vulnerabilities.
+Fast & advanced secret scanner for JavaScript files. Detects 40+ secret types, supports filtering, multithreading, custom regex, and deep JS analysis.
 
-## Key Features
+## Features
+- Detects API keys, tokens, passwords, AWS, Google, GitHub, Slack, Stripe, DB strings, OAuth, JWT, private keys & more  
+- JS variable + comment analysis (`-v`)  
+- Multi-threading (`-t`)  
+- Filtering (`--only`, `--exclude`)  
+- Custom patterns (`--ep`)  
+- Output to file (`-o`)  
+- Silent mode (`-s`)  
+- No color mode (`--no-color`)  
+- Cookie + User-Agent support  
 
-- **Pattern Matching:** Tr10d utilizes regular expressions to search for known patterns of sensitive data, including:
-  - AWS Access Key IDs
-  - AWS Secret Access Keys
-  - API Keys
-  - Bearer Tokens
-  - GitHub Tokens
-- **Web Content Fetching:** The tool fetches the HTML content of a specified URL, allowing it to scan for sensitive data directly from web applications.
-- **User-Friendly Interface:** Tr10d provides a simple command-line interface that guides users through the process of entering a URL and viewing the results.
+## Install
+```bash
+pip3 install requests
+chmod +x tr01d.py
 
-## Installation
+Basic Usage
 
-Follow these steps to install and set up Tr01d:
+cat js_urls.txt | python3 tr01d.py
 
-1. **Install Python**: Ensure that Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
+Examples
 
-2. **Install Required Dependencies**: Open a terminal and run the following command to install the required Python packages:
-   ```bash
-   pip install pyfiglet requests
-   python3 tr10dbyalhamv1.py
+# Only API keys
+cat js_urls.txt | python3 tr01d.py --only api_key
+
+# Exclude passwords + generic
+cat js_urls.txt | python3 tr01d.py --exclude password,generic
+
+# Verbose mode
+cat js_urls.txt | python3 tr01d.py -v
+
+# Save output
+cat js_urls.txt | python3 tr01d.py -o results.txt
+
+# Add custom regex
+cat js_urls.txt | python3 tr01d.py --ep "custom_[a-z0-9]{32}"
+
+# High performance
+cat js_urls.txt | python3 tr01d.py -t 100
+
+Scan a Domain
+
+echo "example.com" | waybackurls | grep "\.js$" | python3 tr01d.py -v -o results.txt
+
+Supported Types
+
+api_key, token, password, aws_key, private_key,
+database, oauth, jwt, github, slack, stripe,
+sendgrid, twilio, google, firebase, cloudflare,
+mailgun, heroku, generic
