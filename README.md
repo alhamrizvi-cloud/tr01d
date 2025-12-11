@@ -1,4 +1,5 @@
-![Uploading image.png…]()
+<img width="923" height="576" alt="image" src="https://github.com/user-attachments/assets/27639bfa-4eba-42f9-8f07-b91e46e6030f" />
+
 
 # TR01D v2 – JavaScript Secret Scanner
 
