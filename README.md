@@ -1,3 +1,4 @@
+<img width="640" height="471" alt="image" src="https://github.com/user-attachments/assets/2fab6d36-8282-4e13-9374-16b40d9b276a" />
 # TR01D v2 – JavaScript Secret Scanner
 
 Fast & advanced secret scanner for JavaScript files. Detects 40+ secret types, supports filtering, multithreading, custom regex, and deep JS analysis.
