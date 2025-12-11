@@ -15,6 +15,7 @@ Fast & advanced secret scanner for JavaScript files. Detects 40+ secret types, s
 
 ## Install
 ```bash
+git clone https://github.com/alhamrizvi-cloud/tr01d.git
 pip3 install requests
 chmod +x tr01d.py
 
