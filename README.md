@@ -1,4 +1,4 @@
-# TR01D – JavaScript Secret Scanner
+# TR01D v2 – JavaScript Secret Scanner
 
 Fast & advanced secret scanner for JavaScript files. Detects 40+ secret types, supports filtering, multithreading, custom regex, and deep JS analysis.
 
